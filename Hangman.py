@@ -73,11 +73,11 @@ word_list = ["python", "keyboard", "hangman", "developer", "function", "variable
 randomword = random.choice(word_list)
 gameover = 0
 guessedletters = []
-showword = ""
 while gameover < 6:
         guess = input("Guess a letter!\n")
         if guess in randomword:
             print("Yes correct")
+            showword = ""
             for i in randomword:
                 if guess == i:
                     showword += guess
