@@ -68,14 +68,14 @@ word_list = ["python", "keyboard", "hangman", "developer", "function", "variable
     "pythonic", "numeric", "networking", "login", "logout", "reboot", "firewall", "storage",
     "keyboard", "execute", "monitor", "database", "host", "domain", "function", "array",
     "index", "value", "stack", "queue", "class", "method", "return", "import",
-    "global", "local", "nested", "parameter", "argument", "keyword", "boolean", "loop"
+    "global", "local", "nested", "parameter", "argument", "keyword", "boolean","loop"
 ]
 randomword = random.choice(word_list)
 gameover = 0
 guessedletters = []
+showword = ""
 while gameover < 6:
         guess = input("Guess a letter!\n")
-        showword = ""
         if guess in randomword:
             print("Yes correct")
             for i in randomword:
@@ -97,6 +97,10 @@ while gameover < 6:
             gameover += 1
             stagecounter -= 1
             print(stages[stagecounter])
+            print(showword)
 
+            
+if gameover == 6:
+     print(randomword)
 print("gameover")
 print(showword)
