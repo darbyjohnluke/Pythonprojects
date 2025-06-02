@@ -70,14 +70,26 @@ word_list = ["python", "keyboard", "hangman", "developer", "function", "variable
     "index", "value", "stack", "queue", "class", "method", "return", "import",
     "global", "local", "nested", "parameter", "argument", "keyword", "boolean","loop"
 ]
+
+logo = r''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
+
+print(logo)
 randomword = random.choice(word_list)
 gameover = 0
 guessedletters = []
 while gameover < 6:
+        showword = ""
         guess = input("Guess a letter!\n")
         if guess in randomword:
             print("Yes correct")
-            showword = ""
             for i in randomword:
                 if guess == i:
                     showword += guess
@@ -89,11 +101,19 @@ while gameover < 6:
             if "_" not in showword:
                  gameover = 6
                  print("You've won")
-            print(showword)
             print(stages[stagecounter])
+            print(showword)
 
         else:
             print("incorrect")
+            for i in randomword:
+                if guess == i:
+                    showword += guess
+                    guessedletters += guess
+                elif i in guessedletters:
+                     showword += i
+                else:
+                    showword += "_"
             gameover += 1
             stagecounter -= 1
             print(stages[stagecounter])
