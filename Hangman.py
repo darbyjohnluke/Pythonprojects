@@ -56,7 +56,20 @@ stages = [r'''
 =========
 ''']
 stagecounter = 6
-word_list = ["aardvark", "baboon", "camel"]
+word_list = ["python", "keyboard", "hangman", "developer", "function", "variable", "syntax", "compile",
+    "debug", "algorithm", "network", "program", "boolean", "integer", "iterate", "object",
+    "package", "script", "tuple", "runtime", "command", "string", "console", "lambda",
+    "virtual", "binary", "process", "execute", "server", "client", "module", "desktop",
+    "version", "thread", "storage", "gateway", "pointer", "webpage", "session", "router",
+    "kernel", "window", "library", "syntax", "dynamic", "integer", "hardware", "monitor",
+    "browser", "address", "cookie", "compile", "session", "update", "archive", "cluster",
+    "feature", "encrypt", "access", "system", "syntax", "record", "mobile", "string",
+    "backup", "upload", "download", "cache", "script", "input", "output", "random",
+    "pythonic", "numeric", "networking", "login", "logout", "reboot", "firewall", "storage",
+    "keyboard", "execute", "monitor", "database", "host", "domain", "function", "array",
+    "index", "value", "stack", "queue", "class", "method", "return", "import",
+    "global", "local", "nested", "parameter", "argument", "keyword", "boolean", "loop"
+]
 randomword = random.choice(word_list)
 gameover = 0
 guessedletters = []
